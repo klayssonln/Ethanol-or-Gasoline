@@ -7,10 +7,103 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android.klayssonleite.ethanolorgasoline.MainActivity">
+    tools:context="com.android.klayssonleite.ethanolorgasoline.MainActivity"
+    android:background="#94bd31">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/logo_fuel"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ethanol Or Gas?"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="#292b2c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Price Ethanol"
+        android:id="@+id/textViewEthanol"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="57dp"
+        android:textColor="#292b2c" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Price Gasoline"
+        android:id="@+id/textViewGas"
+        android:layout_alignTop="@+id/textViewEthanol"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#292b2c" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/priceEthanolId"
+        android:layout_below="@+id/textViewEthanol"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textViewEthanol"
+        android:layout_alignEnd="@+id/textViewEthanol"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:hint="Ex: 1.95" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/priceGasId"
+        android:layout_below="@+id/textViewGas"
+        android:layout_alignRight="@+id/textViewGas"
+        android:layout_alignEnd="@+id/textViewGas"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_alignLeft="@+id/textViewGas"
+        android:layout_alignStart="@+id/textViewGas"
+        android:background="#ffffff"
+        android:padding="5dp"
+        android:hint="Ex: 2.20" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check"
+        android:id="@+id/buttonId"
+        android:layout_below="@+id/priceEthanolId"
+        android:layout_marginTop="51dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textResultId"
+        android:layout_below="@+id/buttonId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:textColor="#292b2c" />
+
 </RelativeLayout>
